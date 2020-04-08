@@ -1,19 +1,33 @@
-import { useEmployees } from "./EmployeeDataProvider.js"
-import { useComputers } from "../computers/ComputerDataProvider.js"
-import { Employee } from "./Employee.js"
+import { useEmployees } from './EmployeeDataProvider.js'
+import { useComputers } from '../computers/ComputerDataProvider.js'
+import { useDepartments } from '../departments/DepartmentDataProvider.js'
+import { useLocations } from '../locations/locationDataProvider.js'
+import { Employee } from './Employee.js'
 
 const contentTarget = document.querySelector(".employeesContainer")
 
 const renderEmployees = (employeesToRender) => {
     const allComputers = useComputers()
+    const allDepartments = useDepartments()
+    const allLocations = useLocations()
     contentTarget.innerHTML = employeesToRender.map(
-        (employeeObject) => {
+        (employee) => {
             const foundComputer = allComputers.find(
                 (currentComputer) => {
-                    return currentComputer.id === employeeObject.computerId
+                    return currentComputer.id === employee.computerId
                 }
             )
-            return Employee(employeeObject, foundComputer)
+            const foundDepartment = allDepartments.find(
+                (currentDepartment) => {
+                    return currentDepartment.id === employee.departmentId
+                }
+            )
+            const foundLocation = allLocations.find(
+                (currentLocation) => {
+                    return currentLocation.id === employee.locationId
+                }
+            )
+            return Employee(employee, foundComputer, foundDepartment, foundLocation)
         }
     ).join("")
 }

@@ -32,6 +32,8 @@
             "firstName": "Rainu",
             "lastName": "Ittycheriah",
             "age": 26,
+            "locationId": 1,
+            "departmentId": 1,
             "computerId": 1
         },
         {
@@ -39,6 +41,8 @@
             "firstName": "Louise",
             "lastName": "Belcher",
             "age": 9,
+            "locationId": 3,
+            "departmentId": 2,
             "computerId": 2
         },
         {
@@ -46,6 +50,8 @@
             "firstName": "Dude",
             "lastName": "Lebowski",
             "age": 39,
+            "locationId": 3,
+            "departmentId": 2,
             "computerId": 3
         },
         {
@@ -53,6 +59,8 @@
             "firstName": "Calvin",
             "lastName": "Hobbes",
             "age": 12,
+            "locationId": 2,
+            "departmentId": 4,
             "computerId": 4
         },
         {
@@ -60,7 +68,41 @@
             "firstName": "Stella",
             "lastName": "McCann",
             "age": 5,
+            "locationId": 2,
+            "departmentId": 3,
             "computerId": 5
+        }
+    ],
+    "departments": [
+        {
+            "id": 1,
+            "name": "Marketing"
+        },
+        {
+            "id": 2,
+            "name": "Programming"
+        },
+        {
+            "id": 3,
+            "name": "Accounting"
+        },
+        {
+            "id": 4,
+            "name": "Sales"
+        }
+    ],
+    "locations": [
+        {
+            "id": 1,
+            "city": "Nashville"
+        },
+        {
+            "id": 2,
+            "city": "Atlanta"
+        },
+        {
+            "id": 3,
+            "city": "Memphis"
         }
     ]
 }
