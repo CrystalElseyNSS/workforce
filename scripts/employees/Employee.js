@@ -6,7 +6,7 @@ export const Employee = (employee, computer, department, location, customers) =>
             <h4>Department: ${department.name}</h4>
             <p>Employee Age: ${employee.age}</p>
             <p>Current Computer: ${computer.year} ${computer.model}</p>
-            <p>Clients: ${customers[0][0].name}, ${customers[1][0].name}</p>
+            <p>Clients: ${customers.map(customer => customer.name).join(", ")}</p>
         </section>
     `
 }
