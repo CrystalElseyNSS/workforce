@@ -38,13 +38,14 @@ const renderEmployees = (employeesToRender) => {
         )    
         const assignedCustomers = relationships.map(
             (relationship) => {
-                return customers.filter(
+                return customers.find(
                     (customer) => {
                         return customer.id === relationship.customerId
                     }    
                 )        
             }            
         )   
+        console.log(assignedCustomers)
         return Employee(employee, foundComputer, foundDepartment, foundLocation, assignedCustomers)
     }).join("")
 }   
