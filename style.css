@@ -1,0 +1,19 @@
+.employeesContainer {
+    border: 2px solid darkgoldenrod;
+    margin: 20px;
+}
+
+.employee {
+    border: 1px dotted gray;
+    margin: 10px;
+}
+
+.customersContainer {
+    border: 2px solid darkmagenta;
+    margin: 20px;
+}
+
+.customer {
+    border: 1px dotted gray;
+    margin: 10px;
+}
